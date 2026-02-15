@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
+  <title>Big Brew Site Map</title>
+  <style>
+  :root { /* Colors */
+    --BB-PRIMARY: #1d1d1d;
+     --BB-SECONDARY: #BB6F1B;
+  }
+
+	body {
+    background-color: #1B1B1B;
+    font-family: Verdana, sans-serif;
+    margin: 0;
+	}
+  
+	.sitemap-container {
+      padding: 5rem 3rem;
+      color: #E3E3E3;
+    }
+	
+    .sitemap-title {
+      text-align: center;
+      color: #FFECB3;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      text-shadow: 1px 1px 2px #000;
+    }
+	
+    .sitemap-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+	
+    .sitemap-section {
+      background: #2C2C2C;
+      border-radius: 10px;
+      padding: 1.5rem;
+      border: 3px solid #BB6F1B;
+      transition: 0.3s;
+    }
+	
+    .sitemap-section:hover {
+      transform: scale(1.03);
+      border-color: #FFF59D;
+    }
+	
+    .sitemap-section h3 {
+      color: #FFECB3;
+      margin-bottom: 1rem;
+    }
+	
+    .sitemap-section ul {
+      list-style: none;
+      padding: 0;
+    }
+	
+    .sitemap-section ul li {
+      margin-bottom: 0.5rem;
+    }
+	
+    .sitemap-section ul a {
+      text-decoration: none;
+      color: #E3E3E3;
+      transition: color 0.3s;
+    }
+	
+    .sitemap-section ul a:hover {
+      color: #FFF59D;
+    }
+	
+    .social-icons {
+      text-align: center;
+      margin-top: 3rem;
+    }
+	
+    .social-icons img {
+      margin: 0 10px;
+      height: 35px;
+      width: 35px;
+    }
+	
+    .legal-links {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+	
+    .legal-links a {
+      margin: 0 1rem;
+      color: #E3E3E3;
+      text-decoration: none;
+    }
+	
+    .legal-links a:hover {
+      color: #FFF59D;
+    }
+	
+    @media (max-width: 768px) {
+      .sitemap-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+	
+    @media (max-width: 480px) {
+      .sitemap-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    /* FOOTER */
+.main-footer {
+    width: device-width;
+    min-height: 200px;
+    background-color: var(--BB-SECONDARY);
+    display: flex;
+    justify-content: space-around;
+}
+#footer-content {
+    max-width: inherit;
+    width: 25%;
+    max-height: inherit;
+}
+#footer-content p {
+    font-family: Verdana;
+    font-size: 1.5rem;
+    margin: 0;
+    text-shadow:1px 1px #1d1d1d;
+}
+
+#footer-nav ul { /* Unordered List for buttons */
+    height: 85px;
+    /* Flex */
+
+
+    color:#E3E3E3;
+    list-style-type: none;
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 0;
+}  
+
+#footer-nav ul a {
+    text-decoration: none;
+    color: #E3E3E3;
+
+}
+#footer-nav ul a:hover {
+    color:#784711;
+}
+
+#footer-nav li {
+    padding-right: 10px;
+    font-family: Verdana;
+}
+
+#footer-content {
+  color:#E3E3E3;
+}
+
+.footer-div {
+    font-family: Verdana;
+    font-size: 0.9rem;
+    margin-top: 21px;
+    color: #D6D6D6;
+}
+
+.footer-div h1 {
+    font-size: 1.1rem;
+    font-weight: 300px; 
+    padding-bottom: 20px; 
+    margin-left: -1px;
+    color:#E3E3E3;
+}
+#footer-content span {
+    font-family: 'Shrikhand';
+}
+
+.footer-div ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* END OF FOOTER */
+
+
+/* HEADER */
+.main-header {
+    width: 100%;
+    max-width: 2000px;
+}
+.header-nav {
+    width: inherit;
+    position: fixed;
+    box-shadow: 0px 1px 8px 8px #1d1d1d;
+    font-family: 'Shrikhand';
+
+}
+.header-nav ul { /* Unordered List for buttons */
+    height: 85px;
+    background-color: var(--BB-SECONDARY);
+    /* Flex */
+    display: flex;
+    align-items: center;
+
+    color:#E3E3E3;
+    list-style-type: none;
+    font-size: 1.2rem;
+    padding: 0 11rem;
+    margin: 0;
+}  
+
+.header-nav ul a {
+    text-decoration: none;
+    color: #E3E3E3;
+}
+.header-nav ul a:hover {
+    color:#784711;
+}
+
+.header-nav li { /* Each Element */
+    padding: 0 0.5rem;
+}
+
+#header-signup {
+    margin-left: auto;
+
+}
+/* END OF HEADER */
+	</style>
+</head>
+<body>
+    <!--Header-->
+    <header class="main-header">
+        <nav class="header-nav">
+            <!--Header Unordered List-->
+            <ul>
+                <li><a href=../home.html><img src="../bblogo.png" height=110 width=110></a></li>
+                <li><a href=menu/menu.html>Menu</a></li>
+                <li><a href=gallery.html>Gallery</a></li>
+                <li><a href=reviews.html>Leave A Review!</a></li>
+                <li id="header-signup"><a href="signup.html">Sign Up!</a></li>
+            </ul>
+        </nav>
+    </header> <!--Header end-->
+
+	<!-- Main Content -->
+	<main class="sitemap-container">
+    <h1 class="sitemap-title">Site Map</h1>
+    <div class="sitemap-grid">
+	<div class="sitemap-section">
+        <h3>Menu</h3>
+        <ul>
+			<li><a href="menu.html">Drinks</a></li>
+			<li><a href="menu.html">Food</a></li>
+			<li><a href="menu.html">At Home Coffee</a></li>
+        </ul>
+    </div>
+	 
+     <div class="sitemap-section">
+        <h3>Gallery</h3>
+        <ul>
+			<li><a href="gallery.html">Our Café Moments</a></li>
+			<li><a href="gallery.html">Promos & Deals</a></li>
+        </ul>
+    </div>
+      
+	<div class="sitemap-section">
+        <h3>About Us</h3>
+        <ul>
+			<li><a href="contacts.html">Customer Service</a></li>
+			<li><a href="locations.html">Locations</a></li>
+        </ul>
+    </div>
+     
+	<div class="sitemap-section">
+        <h3>Account</h3>
+        <ul>
+			<li><a href="signup.html">Register</a></li>
+			<li><a href="contacts.html">Leave a Review</a></li>
+        </ul>
+    </div>
+    </div>
+
+    <!-- Social Media -->
+    <div class="social-icons">
+		<a href="https://www.facebook.com/BigBrewOfficial"><img src="../images/sitemap_images/Facebook.png" alt="Facebook"></a>
+		<a href="https://www.instagram.com/bigbrew.main/?hl=en"><img src="../images/sitemap_images/Instagram.png" alt="Instagram"></a>
+		<a href="https://www.tiktok.com/@bigbrewmain?lang=en"><img src="../images/sitemap_images/Tiktok.png" alt="TikTok"></a>
+    </div>
+
+    <!-- Legal Links -->
+    <div class="legal-links">
+		<a href="#">Privacy Policy</a>
+		<a href="#">Terms of Use</a>
+		<a href="#">Cookie Preferences</a>
+    </div>
+	</main>
+
+    <!--Footer-->
+    <footer class="main-footer">
+        <div id="footer-content">
+            <h1 style="margin-bottom: 0; margin-top: 13px;"><img src="../bblogo.png" height=85 width=85 style="vertical-align: middle;"><span style="vertical-align: middle; font-size: 1.8rem; color: #1d1d1d;">Brew Co.</span></h1>
+            <p>Big in taste, bit in price. <br>An affordable drink with a delectable flavor<br><br><br></p>
+        </div>
+        <div class="footer-div"></div>
+        <div class="footer-div">
+            <h1>Meet the group!</h1>
+            <ul>
+                <li>Alamil, Sophia B.</li>
+                <li>Balonzo, Cloud Mikhos G.</li>
+                <li>Bernabe, Raphael C.</li>
+                <li>Bolalin, Kyle Rayne B.</li>
+                <li>Cordero, Chester Ian G.</li>
+            </ul>
+        </div>
+        <div class="footer-div">
+            <h1>Other links</h1>
+            <nav id="footer-nav">
+                <ul>
+                    <li><a href=sitemap.html>Site map</a></li>
+                    <li><a href=locations.html>Locations</a></li>
+                    <li><a href=contacts.html>Contact us!</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+    </footer> <!--Footer End-->
+</body>
+</html>

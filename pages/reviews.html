@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Brew - Customer Reviews</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
+    <style>
+        :root { /* Colors */
+            --BB-PRIMARY: #1d1d1d;
+            --BB-SECONDARY: #BB6F1B;
+        }
+        body {
+            background-color: #1B1B1B;
+            font-family: Verdana, sans-serif;
+            margin: 0;
+            background: #804d1f;
+            background: linear-gradient(180deg, rgba(128, 77, 31, 1) 0%, rgba(74, 52, 37, 1) 16%, rgba(43, 35, 32, 1) 51%, rgba(29, 29, 29, 1) 100%);
+        }
+
+        main { 
+            padding-top: 110px;
+            min-height: 100vh;
+        }
+        .form-label {
+            color:#E3E3E3;
+        }
+        .fw-bold {
+            color:#E3E3E3;
+        }
+        .col-md-4 p {
+            color: #E3E3E3;
+        }
+       
+        .header-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .header-nav ul { 
+            height: 85px;
+            background-color: #BB6F1B;
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            padding: 0 5%; 
+            margin: 0;
+        }   
+
+        .header-nav ul a {
+            text-decoration: none;
+            color: #E3E3E3;
+            font-size: 1.2rem;
+        }
+
+        .header-nav li { 
+            padding: 0 1rem;
+        }
+
+        #header-signup {
+            margin-left: auto;
+        }
+
+     
+        .review-card {
+            background: #2A2A2A; 
+            border: 2px solid #BB6F1B;
+            border-radius: 15px;
+            padding: 25px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .review-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 25px rgba(187, 111, 27, 0.3);
+        }
+
+        .reviewer-img-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 15px auto;
+            border: 3px solid #BB6F1B;
+        }
+
+        .reviewer-img-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .star-rating {
+            color: #BB6F1B;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        
+        .submit-review-section {
+            background-color: #2A2A2A;
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 40px;
+            margin-top: 50px;
+        }
+
+        .form-control, .form-select {
+            background-color: #1B1B1B;
+            border: 1px solid #BB6F1B;
+            color: #E3E3E3;
+        }
+
+        .form-control:focus, .form-select:focus {
+            background-color: #1B1B1B;
+            color: #E3E3E3;
+            border-color: #f28c28;
+            box-shadow: none;
+        }
+
+        .btn-submit {
+            background-color: #BB6F1B;
+            color: #E3E3E3;
+            font-weight: bold;
+            border: none;
+            padding: 10px 30px;
+            transition: background 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #f28c28;
+            color: #1B1B1B;
+        }
+        /* FOOTER */
+        .main-footer {
+            width: device-width;
+            min-height: 200px;
+            background-color: var(--BB-SECONDARY);
+            display: flex;
+            justify-content: space-around;
+            color:#E3E3E3;
+        }
+        #footer-content {
+            max-width: inherit;
+            width: 25%;
+            max-height: inherit;
+        }
+        #footer-content p {
+            font-family: Verdana;
+            font-size: 1.5rem;
+            margin: 0;
+            text-shadow:1px 1px #1d1d1d;
+        }
+
+        #footer-nav ul { /* Unordered List for buttons */
+            height: 85px;
+            /* Flex */
+
+
+            color:#E3E3E3;
+            list-style-type: none;
+            font-size: 0.9rem;
+            margin: 0;
+            padding: 0;
+        }  
+
+        #footer-nav ul a {
+            text-decoration: none;
+            color: #E3E3E3;
+
+        }
+        #footer-nav ul a:hover {
+            color:#784711;
+        }
+
+        #footer-nav li {
+            padding-right: 10px;
+            font-family: Verdana;
+        }
+
+
+        .footer-div {
+            font-family: Verdana;
+            font-size: 0.9rem;
+            margin-top: 21px;
+            color: #D6D6D6;
+        }
+
+        .footer-div h1 {
+            font-size: 1.1rem;
+            font-weight: 300px; 
+            padding-bottom: 20px; 
+            margin-left: -1px;
+            color:#E3E3E3;
+        }
+        #footer-content span {
+            font-family: 'Shrikhand';
+        }
+
+        .footer-div ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* END OF FOOTER */
+
+
+        /* HEADER */
+        .main-header {
+            width: 100%;
+            max-width: 2000px;
+        }
+        .header-nav {
+            width: inherit;
+            position: fixed;
+            box-shadow: 0px 1px 8px 8px #1d1d1d;
+            font-family: 'Shrikhand';
+
+        }
+        .header-nav ul { /* Unordered List for buttons */
+            height: 85px;
+            background-color: var(--BB-SECONDARY);
+            /* Flex */
+            display: flex;
+            align-items: center;
+
+            color:#E3E3E3;
+            list-style-type: none;
+            font-size: 1.2rem;
+            padding: 0 11rem;
+            margin: 0;
+        }  
+
+        .header-nav ul a {
+            text-decoration: none;
+            color: #E3E3E3;
+        }
+        .header-nav ul a:hover {
+            color:#784711;
+        }
+
+        .header-nav li { /* Each Element */
+            padding: 0 0.5rem;
+        }
+
+        #header-signup {
+            margin-left: auto;
+
+        }
+        /* END OF HEADER */
+    </style>
+</head>
+<body>
+    <!--Header-->
+    <header class="main-header">
+        <nav class="header-nav">
+            <!--Header Unordered List-->
+            <ul>
+                <li><a href=../home.html><img src="../bblogo.png" height=110 width=110></a></li>
+                <li><a href=../pages/menu/menu.html>Menu</a></li>
+                <li><a href=../pages/gallery.html>Gallery</a></li>
+                <li><a href=../pages/reviews.html>Leave A Review!</a></li>
+                <li id="header-signup"><a href="../pages/signup.html">Sign Up!</a></li>
+            </ul>
+        </nav>
+    </header> <!--Header end-->
+
+    <main class="container">
+        <div class="row mb-5 text-center">
+            <div class="col-12">
+                <h2 style="color: #BB6F1B; font-weight: 700;">Brew lover Feedback</h2>
+                <p style="color: #999;">See what people are saying about Big Brew.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="review-card text-center h-100">
+                    <div class="reviewer-img-circle">
+                        <img src="../images/menu_images/Kape Matcha 2.png" alt="User">
+                    </div>
+                    <div class="star-rating">★★★★★</div>
+                    <h5 class="fw-bold">Raphael B.</h5>
+                    <p style="font-size: 0.9rem;">"The Kape Matcha is perfectly balanced. I love the floating effect on the menu!"</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="review-card text-center h-100">
+                    <div class="reviewer-img-circle">
+                        <img src="../images/menu_images/Milk Tea Redvelvet 2.png" alt="User">
+                    </div>
+                    <div class="star-rating">★★★★☆</div>
+                    <h5 class="fw-bold">Maria L.</h5>
+                    <p style="font-size: 0.9rem;">"Red Velvet Milk Tea is my go-to. Very creamy and the shop vibe is great."</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="review-card text-center h-100">
+                    <div class="reviewer-img-circle">
+                        <img src="../images/menu_images/Parf Coffee Jelly 2.png" alt="User">
+                    </div>
+                    <div class="star-rating">★★★★★</div>
+                    <h5 class="fw-bold">Kevin S.</h5>
+                    <p style="font-size: 0.9rem;">"Praf Coffee Jelly is the best way to start the day. Fast service!"</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="submit-review-section">
+                    <h4 class="mb-4" style="color: #BB6F1B; font-weight: 700;">Share Your Experience</h4>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Your Name</label>
+                                <input type="text" class="form-control" placeholder="Name">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Favorite Drink</label>
+                                <select class="form-select">
+                                    <option>Kape Matcha</option>
+                                    <option>Milk Tea Red Velvet</option>
+                                    <option>Praf Coffee Jelly</option>
+                                    <option>Fruit Tea Mango</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Rating</label>
+                            <select class="form-select">
+                                <option>5 Stars - Exceptional</option>
+                                <option>4 Stars - Great</option>
+                                <option>3 Stars - Good</option>
+                                <option>2 Stars - Okay</option>
+                                <option>1 Star - Poor</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">Comment</label>
+                            <textarea class="form-control" rows="4" placeholder="How was your drink?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Submit My Review</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--Footer-->
+    <footer class="main-footer">
+        <div id="footer-content">
+            <h1 style="margin-bottom: 0; margin-top: 13px;"><img src="../bblogo.png" height=85 width=85 style="vertical-align: middle;"><span style="vertical-align: middle; font-size: 1.8rem; color: #1d1d1d;">Brew Co.</span></h1>
+            <p>Big in taste, bit in price. <br>An affordable drink with a delectable flavor<br><br><br></p>
+        </div>
+        <div class="footer-div"></div>
+        <div class="footer-div">
+            <h1>Meet the group!</h1>
+            <ul>
+                <li>Alamil, Sophia B.</li>
+                <li>Balonzo, Cloud Mikhos G.</li>
+                <li>Bernabe, Raphael C.</li>
+                <li>Bolalin, Kyle Rayne B.</li>
+                <li>Cordero, Chester Ian G.</li>
+            </ul>
+        </div>
+        <div class="footer-div">
+            <h1>Other links</h1>
+            <nav id="footer-nav">
+                <ul>
+                    <li><a href=sitemap.html>Site map</a></li>
+                    <li><a href=locations.html>Locations</a></li>
+                    <li><a href=contacts.html>Contact us!</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+    </footer> <!--Footer End-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

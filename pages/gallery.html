@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
+    <title>Big Brew Gallery</title>
+    <style>
+body {
+    background: #804d1f;
+    background: linear-gradient(180deg, rgba(128, 77, 31, 1) 0%, rgba(74, 52, 37, 1) 16%, rgba(43, 35, 32, 1) 51%, rgba(29, 29, 29, 1) 100%);
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #F0F0F0;
+}
+
+:root { /* Colors */
+--BB-PRIMARY: #1d1d1d;
+--BB-SECONDARY: #BB6F1B;
+}
+
+/* MAIN CONTENT */
+main {
+    flex: 1;
+    padding-top: 100px;
+}
+
+/* GALLERY TITLE */
+.gallery-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.gallery-title h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: #FFECB3;
+    text-shadow: 1px 1px 2px #000;
+}
+.gallery-title p {
+    font-size: 1.2rem;
+    color: #E0E0E0;
+}
+
+/* IMAGE GALLERY */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 0 5rem;
+    margin-bottom: 4rem;
+}
+.image-gallery img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+    border: 3px solid #BB6F1B;
+}
+.image-gallery img:hover {
+    transform: scale(1.05);
+    border-color: #FFF59D;
+}
+
+/* CAREER SECTION */
+.career-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 4rem 5rem;
+    background-color: #F5F2E7;
+    color: #3C2F1B;
+    border-radius: 10px;
+    margin: 2rem 5rem;
+}
+.career-text {
+    max-width: 600px;
+}
+.career-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.career-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+.career-image img {
+    max-width: 500px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* PROMOS GALLERY */
+.gallery-section {
+    padding: 3rem 5rem;
+}
+.gallery-section h2 {
+    text-align: center;
+    color: #FFECB3;
+    margin-bottom: 2rem;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+.gallery-card {
+    background: #2C2C2C;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    color: #FFF;
+}
+.gallery-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.gallery-card span {
+    display: block;
+    padding: 0.5rem;
+}
+
+/* FOOTER */
+.main-footer {
+    width: device-width;
+    min-height: 200px;
+    background-color: var(--BB-SECONDARY);
+    display: flex;
+    justify-content: space-around;
+}
+#footer-content {
+    max-width: inherit;
+    width: 25%;
+    max-height: inherit;
+}
+#footer-content p {
+    font-family: Verdana;
+    font-size: 1.5rem;
+    margin: 0;
+    text-shadow:1px 1px #1d1d1d;
+}
+
+#footer-nav ul { /* Unordered List for buttons */
+    height: 85px;
+    /* Flex */
+
+
+    color:#E3E3E3;
+    list-style-type: none;
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 0;
+}  
+
+#footer-nav ul a {
+    text-decoration: none;
+    color: #E3E3E3;
+
+}
+#footer-nav ul a:hover {
+    color:#784711;
+}
+
+#footer-nav li {
+    padding-right: 10px;
+    font-family: Verdana;
+}
+
+
+.footer-div {
+    font-family: Verdana;
+    font-size: 0.9rem;
+    margin-top: 21px;
+    color: #D6D6D6;
+}
+
+.footer-div h1 {
+    font-size: 1.1rem;
+    font-weight: 300px; 
+    padding-bottom: 20px; 
+    margin-left: -1px;
+    color:#E3E3E3;
+}
+#footer-content span {
+    font-family: 'Shrikhand';
+}
+
+.footer-div ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* END OF FOOTER */
+
+
+/* HEADER */
+.main-header {
+    width: 100%;
+    max-width: 2000px;
+}
+.header-nav {
+    width: inherit;
+    position: fixed;
+    box-shadow: 0px 1px 8px 8px #1d1d1d;
+    font-family: 'Shrikhand';
+    z-index: 1000;
+}
+.header-nav ul { /* Unordered List for buttons */
+    height: 85px;
+    background-color: var(--BB-SECONDARY);
+    /* Flex */
+    display: flex;
+    align-items: center;
+
+    color:#E3E3E3;
+    list-style-type: none;
+    font-size: 1.2rem;
+    padding: 0 11rem;
+    margin: 0;
+}  
+
+.header-nav ul a {
+    text-decoration: none;
+    color: #E3E3E3;
+}
+.header-nav ul a:hover {
+    color:#784711;
+}
+
+.header-nav li { /* Each Element */
+    padding: 0 0.5rem;
+}
+
+#header-signup {
+    margin-left: auto;
+
+}
+/* END OF HEADER */
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .career-section {
+        flex-direction: column;
+        padding: 2rem;
+        margin: 2rem;
+    }
+    .career-image img {
+        max-width: 100%;
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .image-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 2rem;
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .image-gallery {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="main-header">
+        <nav class="header-nav">
+            <ul>
+                <li><a href="../home.html"><img src="../bblogo.png" height="110" width="110"></a></li>
+                <li><a href="menu/menu.html">Menu</a></li>
+                <li><a href=gallery.html>Gallery</a></li>
+                <li><a href="reviews.html">Leave A Review!</a></li>
+                <li id="header-signup"><a href="signup.html">Sign Up!</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- GALLERY TITLE -->
+        <section class="gallery-title">
+            <h1>Our Café Moments</h1>
+            <p>Big in taste. Bit in price.</p>
+        </section>
+
+        <!-- IMAGE GALLERY -->
+        <section class="image-gallery">
+            <img src="../images/gallery_images/cus1.jpg" alt="Café Image 1">
+            <img src="../images/gallery_images/cus2.jpg" alt="Café Image 2">
+            <img src="../images/gallery_images/cus3.jpg" alt="Café Image 3">
+            <img src="../images/gallery_images/cus4.jpg" alt="Café Image 4">
+            <img src="../images/gallery_images/cus5.jpg" alt="Café Image 5">
+            <img src="../images/gallery_images/cus6.jpg" alt="Café Image 6">
+        </section>
+
+        <!-- CAREER SECTION -->
+        <section class="career-section">
+            <div class="career-text">
+                <h2>Build a Career You're Proud Of</h2>
+                <p>At BigBrew, we're not just brewing drinks — we're brewing dreams. Join a team where your energy, creativity, and dedication are truly valued. Whether you're starting your journey or looking to grow, we’re here to support every step.</p>
+                <p>Real people. Real passion. Real progress. Start something exciting with us today.</p>
+            </div>
+            <div class="career-image">
+                <img src="../images/gallery_images/staffs.jpg" alt="Team Career Image">
+            </div>
+        </section>
+
+        <!-- PROMOS GALLERY -->
+        <section class="gallery-section">
+            <h2 class="section-title">BigBrew Promos and Big Deals</h2>
+            <div class="gallery-grid">
+                <div class="gallery-card"><img src="../images/gallery_images/pic1.jpg"><span>Second Anniversary Deals</span></div>
+                <div class="gallery-card"><img src="../images/gallery_images/pic2.jpg"><span>Buy Five get One</span></div>
+                <div class="gallery-card"><img src="../images/gallery_images/pic3.jpg"><span>Third Anniversary Promo</span></div>
+                <div class="gallery-card"><img src="../images/gallery_images/pic4.jpg"><span>Valentine Giveaway Promo</span></div>
+                <div class="gallery-card"><img src="../images/gallery_images/pic5.jpg"><span>Two Drinks Discount</span></div>
+                <div class="gallery-card"><img src="../images/gallery_images/pic6.jpg"><span>Franchise Discount Offer</span></div>
+                <div class="gallery-card"><img src="../images/gallery_images/pic7.jpg"><span>Anniversary Bundle Promo</span></div>
+                <div class="gallery-card"><img src="../images/gallery_images/pic8.jpg"><span>Payday Crowd Promo</span></div>
+                <div class="gallery-card"><img src="../images/gallery_images/pic9.jpg"><span>Grand Opening Deal</span></div>
+                <div class="gallery-card"><img src="../images/gallery_images/pic10.jpg"><span>Strawberry Drink Feature</span></div>
+                <div class="gallery-card"><img src="../images/gallery_images/pic11.jpg"><span>Four for Forty-four</span></div>
+                <div class="gallery-card"><img src="../images/gallery_images/pic12.jpg"><span>All Prizes Giveaway</span></div>
+                <div class="gallery-card"><img src="../images/gallery_images/pic13.jpg"><span>Special Drinks Lineup</span></div>
+                <div class="gallery-card"><img src="../images/gallery_images/pic14.jpg"><span>Franchise Fee Discount</span></div>
+                <div class="gallery-card"><img src="../images/gallery_images/pic15.jpg"><span>Sweet Brand Campaign</span></div>
+            </div>
+        </section>
+            <!--Footer-->
+    <footer class="main-footer">
+        <div id="footer-content">
+            <h1 style="margin-bottom: 0; margin-top: 13px;"><img src="../bblogo.png" height=85 width=85 style="vertical-align: middle;"><span style="vertical-align: middle; font-size: 1.8rem; color: #1d1d1d;">Brew Co.</span></h1>
+            <p>Big in taste, bit in price. <br>An affordable drink with a delectable flavor<br><br><br></p>
+        </div>
+        <div class="footer-div"></div>
+        <div class="footer-div">
+            <h1>Meet the group!</h1>
+            <ul>
+                <li>Alamil, Sophia B.</li>
+                <li>Balonzo, Cloud Mikhos G.</li>
+                <li>Bernabe, Raphael C.</li>
+                <li>Bolalin, Kyle Rayne B.</li>
+                <li>Cordero, Chester Ian G.</li>
+            </ul>
+        </div>
+        <div class="footer-div">
+            <h1>Other links</h1>
+            <nav id="footer-nav">
+                <ul>
+                    <li><a href=sitemap.html>Site map</a></li>
+                    <li><a href=locations.html>Locations</a></li>
+                    <li><a href=contacts.html>Contact us!</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+    </footer> <!--Footer End-->
+    </main>
+    </body>
+    </html>
+
+
+                

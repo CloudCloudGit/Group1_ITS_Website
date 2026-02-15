@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
+    <title>Big Brew Sign up</title>
+    <style>
+        body {
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #804d1f;
+            background: linear-gradient(180deg, rgba(128, 77, 31, 1) 0%, rgba(74, 52, 37, 1) 16%, rgba(43, 35, 32, 1) 51%, rgba(29, 29, 29, 1) 100%);
+            color: #E3E3E3;
+            height: 100%;
+        }
+
+/*Body*/
+main{ flex: 1;
+}
+:root { /* Colors */
+--BB-PRIMARY: #1d1d1d;
+--BB-SECONDARY: #BB6F1B;
+}
+
+
+input[type=text], input[type=password] {
+  width: 98%;
+  padding: 15px;
+  margin: 5px 0 15px 0;
+  display: inline-block;
+  border: none;
+  border-radius: 15px;
+  background: #BB6F1B;
+}
+
+
+hr {
+  border: 1px solid #1B1B1B;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #BB6F1B;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 1px;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #BB6F1B;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  width: 60%;
+}
+
+.clearfix {
+  display: flex;
+  gap: 10px; /* controls space between buttons */
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+
+/* FOOTER */
+.main-footer {
+    width: device-width;
+    min-height: 200px;
+    background-color: var(--BB-SECONDARY);
+    display: flex;
+    justify-content: space-around;
+}
+#footer-content {
+    max-width: inherit;
+    width: 25%;
+    max-height: inherit;
+}
+#footer-content p {
+    font-family: Verdana;
+    font-size: 1.5rem;
+    margin: 0;
+    text-shadow:1px 1px #1d1d1d;
+}
+
+#footer-nav ul { /* Unordered List for buttons */
+    height: 85px;
+    /* Flex */
+
+
+    color:#E3E3E3;
+    list-style-type: none;
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 0;
+}  
+
+#footer-nav ul a {
+    text-decoration: none;
+    color: #E3E3E3;
+
+}
+#footer-nav ul a:hover {
+    color:#784711;
+}
+
+#footer-nav li {
+    padding-right: 10px;
+    font-family: Verdana;
+}
+
+
+.footer-div {
+    font-family: Verdana;
+    font-size: 0.9rem;
+    margin-top: 21px;
+    color: #D6D6D6;
+}
+
+.footer-div h1 {
+    font-size: 1.1rem;
+    font-weight: 300px; 
+    padding-bottom: 20px; 
+    margin-left: -1px;
+    color:#E3E3E3;
+}
+#footer-content span {
+    font-family: 'Shrikhand';
+}
+
+.footer-div ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* END OF FOOTER */
+
+
+/* HEADER */
+.main-header {
+    width: 100%;
+    max-width: 2000px;
+}
+.header-nav {
+    width: inherit;
+    position: fixed;
+    box-shadow: 0px 1px 8px 8px #1d1d1d;
+    font-family: 'Shrikhand';
+
+}
+.header-nav ul { /* Unordered List for buttons */
+    height: 85px;
+    background-color: var(--BB-SECONDARY);
+    /* Flex */
+    display: flex;
+    align-items: center;
+
+    color:#E3E3E3;
+    list-style-type: none;
+    font-size: 1.2rem;
+    padding: 0 11rem;
+    margin: 0;
+}  
+
+.header-nav ul a {
+    text-decoration: none;
+    color: #E3E3E3;
+}
+.header-nav ul a:hover {
+    color:#784711;
+}
+
+.header-nav li { /* Each Element */
+    padding: 0 0.5rem;
+}
+
+#header-signup {
+    margin-left: auto;
+
+}
+/* END OF HEADER */
+    </style>
+</head>
+<body>
+<main>
+    <!--Header-->
+    <header class="main-header">
+        <nav class="header-nav">
+            <!--Header Unordered List-->
+            <ul>
+                <li><a href=../home.html><img src="../bblogo.png" height=110 width=110></a></li>
+                <li><a href=menu/menu.html>Menu</a></li>
+                <li><a href=gallery.html>Gallery</a></li>
+                <li><a href=reviews.html>Leave A Review!</a></li>
+                <li id="header-signup"><a href="signup.html">Sign Up!</a></li>
+            </ul>
+        </nav>
+    </header> <!--Header end-->
+
+    <!-- Page content goes here -->
+   <form action="action_page.php">
+  <div class="container">
+    <h1 style="text-align: center;">Sign up</h1> 
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" name="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" name="psw-repeat" required>
+
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn" onclick="window.location.href='../home.html'"">Cancel</button>
+<button type="button" class="signupbtn"
+  onclick="window.location.href='signin.html'">
+  Sign Up
+</button>    </div>
+  </div>
+</form>
+</main>
+    <!--Footer-->
+    <footer class="main-footer">
+        <div id="footer-content">
+            <h1 style="margin-bottom: 0; margin-top: 13px;"><img src="../bblogo.png" height=85 width=85 style="vertical-align: middle;"><span style="vertical-align: middle; font-size: 1.8rem; color: #1d1d1d;">Brew Co.</span></h1>
+            <p>Big in taste, bit in price. <br>An affordable drink with a delectable flavor<br><br><br></p>
+        </div>
+        <div class="footer-div"></div>
+        <div class="footer-div">
+            <h1>Meet the group!</h1>
+            <ul>
+                <li>Alamil, Sophia B.</li>
+                <li>Balonzo, Cloud Mikhos G.</li>
+                <li>Bernabe, Raphael C.</li>
+                <li>Bolalin, Kyle Rayne B.</li>
+                <li>Cordero, Chester Ian G.</li>
+            </ul>
+        </div>
+        <div class="footer-div">
+            <h1>Other links</h1>
+            <nav id="footer-nav">
+                <ul>
+                    <li><a href=sitemap.html>Site map</a></li>
+                    <li><a href=locations.html>Locations</a></li>
+                    <li><a href=contacts.html>Contact us!</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+    </footer> <!--Footer End-->
+
+</body>
+</html>
