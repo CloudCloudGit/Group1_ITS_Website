@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Big Brew Menu</title>
+    <title>Big Brew - Checkout</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/menu_styles.css">
     <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
     <style>
-        /* Shared button styling for consistency across all menu pages */
+        /* Consistent button styling across all menu pages */
         .add-to-cart {
             background-color: #BB6F1B;
             color: white;
@@ -68,78 +70,25 @@
                             style="color: #BB6F1B; font-weight: bold; font-size: 0.9rem;">CHECKOUT</a></li>
                 </ul>
             </aside>
-
             <div class="col-12 col-md-8 px-5">
                 <h3 class="mt-4 mb-5" style="color: #BB6F1B; border-bottom: 1px solid #333; padding-bottom: 10px;">
-                    Featured Drinks</h3>
+                    Checkout
+                </h3>
 
-                <div class="row">
-                    <div class="col-6 col-md-3 menu-item text-center mb-5 d-flex flex-column align-items-center">
-                        <div class="img-wrapper"><img src="../../images/menu_images/Kape Matcha 2.png"
-                                alt="Kape Matcha"></div>
-                        <p class="fw-semibold mb-1">Kape Matcha</p>
-                        <button class="btn add-to-cart" data-name="Kape Matcha" data-price="39.00">Add to Cart</button>
-                    </div>
-
-                    <div class="col-6 col-md-3 menu-item text-center mb-5 d-flex flex-column align-items-center">
-                        <div class="img-wrapper"><img src="../../images/menu_images/Fruit Tea Mango.png"
-                                alt="Fruit Tea Mango"></div>
-                        <p class="fw-semibold mb-1">Fruit Tea Mango</p>
-                        <button class="btn add-to-cart" data-name="Fruit Tea Mango" data-price="49.00">Add to
-                            Cart</button>
-                    </div>
-
-                    <div class="col-6 col-md-3 menu-item text-center mb-5 d-flex flex-column align-items-center">
-                        <div class="img-wrapper"><img src="../../images/menu_images/Milk Tea Matcha 2.png"
-                                alt="Milk Tea Matcha"></div>
-                        <p class="fw-semibold mb-1">Milk Tea Matcha</p>
-                        <button class="btn add-to-cart" data-name="Milk Tea Matcha" data-price="39.00">Add to
-                            Cart</button>
-                    </div>
-
-                    <div class="col-6 col-md-3 menu-item text-center mb-5 d-flex flex-column align-items-center">
-                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Matcha 2.png"
-                                alt="Praf Matcha"></div>
-                        <p class="fw-semibold mb-1">Praf Matcha</p>
-                        <button class="btn add-to-cart" data-name="Praf Matcha" data-price="59.00">Add to Cart</button>
-                    </div>
+                <div id="cart-items-display" class="mb-4">
+                    <p style="color: white;">Your cart is empty.</p>
                 </div>
 
-                <h4 class="mb-5" style="color: #BB6F1B; border-bottom: 1px solid #333; padding-bottom: 10px;">Baristas
-                    Favorite</h4>
-
-                <div class="row">
-                    <div class="col-6 col-md-3 menu-item text-center mb-5 d-flex flex-column align-items-center">
-                        <div class="img-wrapper"><img src="../../images/menu_images/Kape Vietnamese 2.png"
-                                alt="Kape Vietnamese"></div>
-                        <p class="fw-semibold mb-1">Kape Vietnamese</p>
-                        <button class="btn add-to-cart" data-name="Kape Vietnamese" data-price="39.00">Add to
-                            Cart</button>
+                <div id="checkout-summary" class="p-4 border rounded shadow-sm mb-4" style="display: none;">
+                    <h5 class="fw-bold">Order Summary</h5>
+                    <div class="d-flex justify-content-between mb-3">
+                        <span>Total Amount:</span>
+                        <span class="fw-bold text-success" id="total-price">₱0.00</span>
                     </div>
-
-                    <div class="col-6 col-md-3 menu-item text-center mb-5 d-flex flex-column align-items-center">
-                        <div class="img-wrapper"><img src="../../images/menu_images/Milk Tea Redvelvet 2.png"
-                                alt="Milk Tea Red Velvet"></div>
-                        <p class="fw-semibold mb-1">Milk Tea Red Velvet</p>
-                        <button class="btn add-to-cart" data-name="Milk Tea Red Velvet" data-price="39.00">Add to
-                            Cart</button>
-                    </div>
-
-                    <div class="col-6 col-md-3 menu-item text-center mb-5 d-flex flex-column align-items-center">
-                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Coffee Jelly 2.png"
-                                alt="Praf Coffee Jelly"></div>
-                        <p class="fw-semibold mb-1">Praf Coffee Jelly</p>
-                        <button class="btn add-to-cart" data-name="Praf Coffee Jelly" data-price="59.00">Add to
-                            Cart</button>
-                    </div>
-
-                    <div class="col-6 col-md-3 menu-item text-center mb-5 d-flex flex-column align-items-center">
-                        <div class="img-wrapper"><img src="../../images/menu_images/Fruit Tea WaterMelon.png"
-                                alt="Fruit Tea Water Melon"></div>
-                        <p class="fw-semibold mb-1">Fruit Tea WaterMelon</p>
-                        <button class="btn add-to-cart" data-name="Fruit Tea WaterMelon" data-price="49.00">Add to
-                            Cart</button>
-                    </div>
+                    <button id="btn-place-order" class="btn w-100 fw-bold text-white"
+                        style="background-color: #BB6F1B;">
+                        PLACE ORDER
+                    </button>
                 </div>
             </div>
         </div>
@@ -175,7 +124,7 @@
             </nav>
         </div>
     </footer>
-    <script src="../../scripts/cart.js"></script>
+    <script src="../../scripts/checkout.js"></script>
 </body>
 
 </html>

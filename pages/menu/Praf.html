@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,117 +8,191 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/menu_styles.css">
     <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
+    <style>
+        /* Consistent button styling across all menu pages */
+        .add-to-cart {
+            background-color: #BB6F1B;
+            color: white;
+            padding: 5px 20px;
+            font-size: 0.9rem;
+            border: none;
+            border-radius: 5px;
+            white-space: nowrap;
+            width: fit-content;
+            transition: 0.2s;
+            margin-top: 5px;
+        }
+
+        .add-to-cart:hover {
+            background-color: #9c5c16;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .img-wrapper img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
+
 <body>
-    <!--Header-->
     <header class="main-header">
         <nav class="header-nav">
-            <!--Header Unordered List-->
             <ul>
-                <li><a href=../../home.html><img src="../../bblogo.png" height=110 width=110></a></li>
-                <li><a href=../../pages/menu/menu.html>Menu</a></li>
-                <li><a href=../../pages/gallery.html>Gallery</a></li>
-                <li><a href=../../pages/reviews.html>Leave A Review!</a></li>
+                <li><a href="../../home.html"><img src="../../bblogo.png" height="110" width="110"></a></li>
+                <li><a href="../../pages/menu/menu.html">Menu</a></li>
+                <li><a href="../../pages/gallery.html">Gallery</a></li>
+                <li><a href="../../pages/reviews.html">Leave A Review!</a></li>
                 <li id="header-signup"><a href="../../pages/signup.html">Sign Up!</a></li>
             </ul>
         </nav>
-    </header> <!--Header end-->
+    </header>
 
     <main class="container-fluid">
         <div class="row">
             <aside class="col-md-2 offset-md-1 d-none d-md-block pt-4">
                 <h5 class="fw-bold mb-3" style="color: #BB6F1B;">DRINKS</h5>
                 <ul class="list-unstyled">
-                    <li class="mb-2"><a href="menu.html" class="text-decoration-none" style="color: #BB6F1B; font-weight: bold; font-size: 0.9rem;">FEATURED DRINKS</a></li>
-                    <li class="mb-2"><a href="Iced Coffee.html" class="text-decoration-none" style="color: #BB6F1B; font-weight: bold; font-size: 0.9rem;">ICED COFFEE</a></li>
-                    <li class="mb-2"><a href="Fruit Tea.html" class="text-decoration-none" style="color: #BB6F1B; font-weight: bold; font-size: 0.9rem;">FRUIT TEA</a></li>
-                    <li class="mb-2"><a href="MilkTea.html" class="text-decoration-none" style="color: #BB6F1B; font-weight: bold; font-size: 0.9rem;">MILK TEA</a></li>
-                    <li class="mb-2"><a href="Praf.html" class="text-decoration-none" style="color: #BB6F1B; font-weight: bold; font-size: 0.9rem;">PRAF</a></li>
+                    <li class="mb-2"><a href="menu.html" class="text-decoration-none"
+                            style="color: #BB6F1B; font-weight: bold; font-size: 0.9rem;">FEATURED DRINKS</a></li>
+                    <li class="mb-2"><a href="Iced Coffee.html" class="text-decoration-none"
+                            style="color: #BB6F1B; font-weight: bold; font-size: 0.9rem;">ICED COFFEE</a></li>
+                    <li class="mb-2"><a href="Fruit Tea.html" class="text-decoration-none"
+                            style="color: #BB6F1B; font-weight: bold; font-size: 0.9rem;">FRUIT TEA</a></li>
+                    <li class="mb-2"><a href="MilkTea.html" class="text-decoration-none"
+                            style="color: #BB6F1B; font-weight: bold; font-size: 0.9rem;">MILK TEA</a></li>
+                    <li class="mb-2"><a href="Praf.html" class="text-decoration-none"
+                            style="color: #BB6F1B; font-weight: bold; font-size: 0.9rem;">PRAF</a></li>
+                    <li class="mb-2"><a href="checkout.html" class="text-decoration-none"
+                            style="color: #BB6F1B; font-weight: bold; font-size: 0.9rem;">CHECKOUT</a></li>
                 </ul>
             </aside>
 
             <div class="col-12 col-md-8 px-5">
-                <h3 class="mt-4 mb-5" style="color: #BB6F1B; border-bottom: 1px solid #333; padding-bottom: 10px;">Praf</h3>
-                
+                <h3 class="mt-4 mb-5" style="color: #BB6F1B; border-bottom: 1px solid #333; padding-bottom: 10px;">Praf
+                </h3>
+
                 <div class="row">
-                    <div class="col-6 col-md-3 menu-item text-center mb-5">
-                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Choco HazelNut 2.png" alt="Choco Hazelnut"></div>
-                        <p class="fw-semibold">Praf Choco HazelNut</p>
-                    </div>
-                    <div class="col-6 col-md-3 menu-item text-center mb-5">
-                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Caramel Macch 2.png" alt="Caramel Macch"></div>
-                        <p class="fw-semibold">Praf Caramel Macch</p>
-                    </div>
-                    <div class="col-6 col-md-3 menu-item text-center mb-5">
-                        <div class="img-wrapper"><img src="../../images/menu_images/Parf CheeseCake 2.png" alt="Cheesecake"></div>
-                        <p class="fw-semibold">Praf Cheese Cake</p>
-                    </div>
-                    <div class="col-6 col-md-3 menu-item text-center mb-5">
-                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Chocolate 2.png" alt="Chocolate"></div>
-                        <p class="fw-semibold">Praf Chocolate</p>
+                    <div class="col-6 col-md-3 menu-item text-center mb-5 d-flex flex-column align-items-center">
+                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Choco HazelNut 2.png"
+                                alt="Choco Hazelnut"></div>
+                        <p class="fw-semibold mb-1">Praf Choco HazelNut</p>
+                        <button class="btn add-to-cart" data-name="Praf Choco Hazelnut" data-price="59.00">Add to
+                            Cart</button>
                     </div>
 
-                    <div class="col-6 col-md-3 menu-item text-center mb-5">
-                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Matcha 2.png" alt="Chocolate"></div>
-                        <p class="fw-semibold">Praf Matcha</p>
+                    <div class="col-6 col-md-3 menu-item text-center mb-5 d-flex flex-column align-items-center">
+                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Caramel Macch 2.png"
+                                alt="Caramel Macch"></div>
+                        <p class="fw-semibold mb-1">Praf Caramel Macch</p>
+                        <button class="btn add-to-cart" data-name="Praf Caramel Macch" data-price="59.00">Add to
+                            Cart</button>
                     </div>
 
-                    <div class="col-6 col-md-3 menu-item text-center mb-5">
-                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Melon 2.png" alt="Chocolate"></div>
-                        <p class="fw-semibold">Praf Melon</p>
+                    <div class="col-6 col-md-3 menu-item text-center mb-5 d-flex flex-column align-items-center">
+                        <div class="img-wrapper"><img src="../../images/menu_images/Parf CheeseCake 2.png"
+                                alt="Cheesecake"></div>
+                        <p class="fw-semibold mb-1">Praf Cheese Cake</p>
+                        <button class="btn add-to-cart" data-name="Praf Cheese Cake" data-price="59.00">Add to
+                            Cart</button>
                     </div>
 
-                    <div class="col-6 col-md-3 menu-item text-center mb-5">
-                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Moca 2.png" alt="Chocolate"></div>
-                        <p class="fw-semibold">Praf Moca</p>
+                    <div class="col-6 col-md-3 menu-item text-center mb-5 d-flex flex-column align-items-center">
+                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Chocolate 2.png"
+                                alt="Chocolate"></div>
+                        <p class="fw-semibold mb-1">Praf Chocolate</p>
+                        <button class="btn add-to-cart" data-name="Praf Chocolate" data-price="59.00">Add to
+                            Cart</button>
                     </div>
 
+                    <div class="col-6 col-md-3 menu-item text-center mb-5 d-flex flex-column align-items-center">
+                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Matcha 2.png" alt="Matcha">
+                        </div>
+                        <p class="fw-semibold mb-1">Praf Matcha</p>
+                        <button class="btn add-to-cart" data-name="Praf Matcha" data-price="59.00">Add to Cart</button>
+                    </div>
+
+                    <div class="col-6 col-md-3 menu-item text-center mb-5 d-flex flex-column align-items-center">
+                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Melon 2.png" alt="Melon"></div>
+                        <p class="fw-semibold mb-1">Praf Melon</p>
+                        <button class="btn add-to-cart" data-name="Praf Melon" data-price="59.00">Add to Cart</button>
+                    </div>
+
+                    <div class="col-6 col-md-3 menu-item text-center mb-5 d-flex flex-column align-items-center">
+                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Moca 2.png" alt="Moca"></div>
+                        <p class="fw-semibold mb-1">Praf Moca</p>
+                        <button class="btn add-to-cart" data-name="Praf Moca" data-price="59.00">Add to Cart</button>
+                    </div>
                 </div>
 
-                <h4 class="mb-5" style="color: #BB6F1B; border-bottom: 1px solid #333; padding-bottom: 10px;">More Praf's</h4>
+                <h4 class="mb-5" style="color: #BB6F1B; border-bottom: 1px solid #333; padding-bottom: 10px;">More Prafs
+                </h4>
+
                 <div class="row">
-                    <div class="col-6 col-md-3 menu-item text-center mb-5">
-                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Cookies & Cream 2.png" alt="Matcha"></div>
-                        <p class="fw-semibold">Praf Cookies & Cream</p>
-                    </div>
-                    <div class="col-6 col-md-3 menu-item text-center mb-5">
-                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Creamy Avocado 2.png" alt="Melon"></div>
-                        <p class="fw-semibold">Praf Creamy Avocado</p>
-                    </div>
-                    <div class="col-6 col-md-3 menu-item text-center mb-5">
-                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Java 2.png" alt="Moca"></div>
-                        <p class="fw-semibold">Praf Java</p>
-                    </div>
-                    <div class="col-6 col-md-3 menu-item text-center mb-5">
-                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Strawberry 2.png" alt="Coffee Jelly"></div>
-                        <p class="fw-semibold">Praf Strawberry</p>
+                    <div class="col-6 col-md-3 menu-item text-center mb-5 d-flex flex-column align-items-center">
+                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Cookies & Cream 2.png"
+                                alt="Cookies and Cream"></div>
+                        <p class="fw-semibold mb-1">Praf Cookies & Cream</p>
+                        <button class="btn add-to-cart" data-name="Praf Cookies and Cream" data-price="59.00">Add to
+                            Cart</button>
                     </div>
 
-                    <div class="col-6 col-md-3 menu-item text-center mb-5">
-                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Taro 2.png" alt="Coffee Jelly"></div>
-                        <p class="fw-semibold">Praf Taro</p>
+                    <div class="col-6 col-md-3 menu-item text-center mb-5 d-flex flex-column align-items-center">
+                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Creamy Avocado 2.png"
+                                alt="Creamy Avocado"></div>
+                        <p class="fw-semibold mb-1">Praf Creamy Avocado</p>
+                        <button class="btn add-to-cart" data-name="Praf Creamy Avocado" data-price="59.00">Add to
+                            Cart</button>
                     </div>
 
-                    <div class="col-6 col-md-3 menu-item text-center mb-5">
-                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Vanilla Coffee 2.png" alt="Coffee Jelly"></div>
-                        <p class="fw-semibold">Praf Vanilla Coffee</p>
+                    <div class="col-6 col-md-3 menu-item text-center mb-5 d-flex flex-column align-items-center">
+                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Java 2.png" alt="Java"></div>
+                        <p class="fw-semibold mb-1">Praf Java</p>
+                        <button class="btn add-to-cart" data-name="Praf Java" data-price="59.00">Add to Cart</button>
                     </div>
 
-                    <div class="col-6 col-md-3 menu-item text-center mb-5">
-                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Coffee Jelly 2.png" alt="Coffee Jelly"></div>
-                        <p class="fw-semibold">Praf Coffee Jelly</p>
+                    <div class="col-6 col-md-3 menu-item text-center mb-5 d-flex flex-column align-items-center">
+                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Strawberry 2.png"
+                                alt="Strawberry"></div>
+                        <p class="fw-semibold mb-1">Praf Strawberry</p>
+                        <button class="btn add-to-cart" data-name="Praf Strawberry" data-price="59.00">Add to
+                            Cart</button>
                     </div>
 
+                    <div class="col-6 col-md-3 menu-item text-center mb-5 d-flex flex-column align-items-center">
+                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Taro 2.png" alt="Taro"></div>
+                        <p class="fw-semibold mb-1">Praf Taro</p>
+                        <button class="btn add-to-cart" data-name="Praf Taro" data-price="59.00">Add to Cart</button>
+                    </div>
+
+                    <div class="col-6 col-md-3 menu-item text-center mb-5 d-flex flex-column align-items-center">
+                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Vanilla Coffee 2.png"
+                                alt="Vanilla Coffee"></div>
+                        <p class="fw-semibold mb-1">Praf Vanilla Coffee</p>
+                        <button class="btn add-to-cart" data-name="Praf Vanilla Coffee" data-price="59.00">Add to
+                            Cart</button>
+                    </div>
+
+                    <div class="col-6 col-md-3 menu-item text-center mb-5 d-flex flex-column align-items-center">
+                        <div class="img-wrapper"><img src="../../images/menu_images/Parf Coffee Jelly 2.png"
+                                alt="Coffee Jelly"></div>
+                        <p class="fw-semibold mb-1">Praf Coffee Jelly</p>
+                        <button class="btn add-to-cart" data-name="Praf Coffee Jelly" data-price="59.00">Add to
+                            Cart</button>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <!--Footer-->
     <footer class="main-footer">
         <div id="footer-content">
-            <h1 style="margin-bottom: 0; margin-top: 13px;"><img src="../../bblogo.png" height=85 width=85 style="vertical-align: middle;"><span style="vertical-align: middle; font-size: 1.8rem; color: #1d1d1d;">Brew Co.</span></h1>
-            <p>Big in taste, bit in price. <br>An affordable drink with a delectable flavor<br><br><br></p>
+            <h1 style="margin-bottom: 0; margin-top: 13px;">
+                <img src="../../bblogo.png" height="85" width="85" style="vertical-align: middle;">
+                <span style="vertical-align: middle; font-size: 1.8rem; color: #1d1d1d;">Brew Co.</span>
+            </h1>
+            <p>Big in taste, bit in price. <br>An affordable drink with a delectable flavor</p>
         </div>
         <div class="footer-div"></div>
         <div class="footer-div">
@@ -134,13 +209,14 @@
             <h1>Other links</h1>
             <nav id="footer-nav">
                 <ul>
-                    <li><a href=../../pages/sitemap.html>Site map</a></li>
-                    <li><a href=../../pages/locations.html>Locations</a></li>
-                    <li><a href=../../pages/contacts.html>Contact us!</a></li>
+                    <li><a href="../../pages/sitemap.html">Site map</a></li>
+                    <li><a href="../../pages/locations.html">Locations</a></li>
+                    <li><a href="../../pages/contacts.html">Contact us!</a></li>
                 </ul>
             </nav>
         </div>
-    
-    </footer> <!--Footer End-->
+    </footer>
+    <script src="../../scripts/checkout.js"></script>
 </body>
+
 </html>
