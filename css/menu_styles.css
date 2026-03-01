@@ -136,6 +136,7 @@ main {
     position: fixed;
     box-shadow: 0px 1px 8px 8px #1d1d1d;
     font-family: 'Shrikhand';
+    z-index: 1000;
 
 }
 .header-nav ul { /* Unordered List for buttons */

@@ -8,7 +8,7 @@ const firebaseConfig = {
     appId: "1:296481585409:web:692ca6a62bcf8d56484300"
 };
 
-// Initialize Firebase
+// firebase init
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
@@ -63,17 +63,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const orderData = {
             items: cart,
             totalAmount: totalPriceElement.innerText,
-            orderDate: firebase.firestore.Timestamp.now(), // Uses Firebase timestamp
+            orderDate: firebase.firestore.Timestamp.now(),
             status: "Pending"
         };
 
         try {
-            // This replaces the 'fetch' call
             await db.collection("orders").add(orderData);
 
             alert('Order placed successfully in Firebase!');
             localStorage.removeItem('bigBrewCart');
-            window.location.reload(); // Refresh to show empty cart
+            window.location.reload();
         } catch (error) {
             console.error("Error adding document: ", error);
             alert('Error sending order to Firebase. Check console.');
